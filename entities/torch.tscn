@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddeyss5tltbyx"]
+
+[ext_resource type="Texture2D" uid="uid://mf0v3yl61jqd" path="res://assets/textures/light128.png" id="1_1hhi8"]
+
+[node name="Torch" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.890196, 0.635294, 0.258824, 1)
+energy = 1.41
+shadow_enabled = true
+texture = ExtResource("1_1hhi8")
+texture_scale = 3.76

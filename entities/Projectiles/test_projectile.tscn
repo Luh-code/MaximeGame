@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqnnf0yii5pjq"]
+
+[ext_resource type="PackedScene" uid="uid://khcwsx2viyns" path="res://entities/Projectiles/BasicProjectile.tscn" id="1_d47hl"]
+
+[node name="BasicProjectile" instance=ExtResource("1_d47hl")]
+vel = Vector2(100, 0)
+bounces = 3

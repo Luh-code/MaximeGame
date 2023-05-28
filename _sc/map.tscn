@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0r15gcy6ogpy"]
+
+[ext_resource type="Script" path="res://map.gd" id="1_5qj6x"]
+[ext_resource type="PackedScene" uid="uid://cvtlgynap5i57" path="res://_sc/rooms/testraum1.tscn" id="2_mey7w"]
+[ext_resource type="PackedScene" uid="uid://cbbiwcituov4n" path="res://entities/player.tscn" id="3_2yok2"]
+[ext_resource type="PackedScene" uid="uid://d2nbf1fcrlav5" path="res://_sc/rooms/testraum2.tscn" id="3_4dvnk"]
+
+[node name="map" type="Node2D"]
+script = ExtResource("1_5qj6x")
+starting = ExtResource("2_mey7w")
+rooms = Array[PackedScene]([ExtResource("2_mey7w"), ExtResource("3_4dvnk")])
+roomnum = 11
+
+[node name="rooms" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Player" parent="." instance=ExtResource("3_2yok2")]

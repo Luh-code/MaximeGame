@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://6na30yv3c5qc"]
+
+[ext_resource type="Script" path="res://entities/guns/generic_gun.gd" id="1_2unmc"]
+[ext_resource type="PackedScene" uid="uid://cqnnf0yii5pjq" path="res://entities/Projectiles/test_projectile.tscn" id="2_e08lj"]
+[ext_resource type="Texture2D" uid="uid://cl0atbjurhc7a" path="res://assets/textures/guns/test_ak.png" id="2_n5sck"]
+
+[node name="generic_gun" type="Node2D"]
+script = ExtResource("1_2unmc")
+projectile = ExtResource("2_e08lj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_n5sck")
+
+[node name="Barrel" type="Node2D" parent="."]
+position = Vector2(20, -6)
+
+[node name="Cooldown" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true

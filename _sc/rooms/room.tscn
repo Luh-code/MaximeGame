@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4b47egfiw21j"]
+
+[node name="Room" type="Node2D"]
+
+[node name="doorbottom" type="Node2D" parent="."]
+
+[node name="doortop" type="Node2D" parent="."]
+
+[node name="doorright" type="Node2D" parent="."]
+
+[node name="doorleft" type="Node2D" parent="."]

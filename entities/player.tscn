@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbbiwcituov4n"]
+
+[ext_resource type="Script" path="res://entities/player.gd" id="1_5e0hm"]
+[ext_resource type="PackedScene" uid="uid://cwejipfi33jws" path="res://tools/debug_interface.tscn" id="2_q3qkn"]
+[ext_resource type="PackedScene" uid="uid://6na30yv3c5qc" path="res://entities/guns/generic_gun.tscn" id="2_t7obh"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_64yhe"]
+radius = 6.0
+height = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhwfg"]
+radius = 6.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("debug_interface") groups=["Player"]]
+collision_mask = 7
+script = ExtResource("1_5e0hm")
+debug_interface = NodePath("Camera2D/Debug Interface")
+camLerpSpeed = 9.0
+accel = 2300.0
+decel = 1300.0
+holding_scene = ExtResource("2_t7obh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.6, 2.6)
+
+[node name="Debug Interface" parent="Camera2D" instance=ExtResource("2_q3qkn")]
+custom_minimum_size = Vector2(1152, 648)
+offset_left = -221.0
+offset_top = -125.0
+offset_right = 931.0
+offset_bottom = 523.0
+scale = Vector2(0.385, 0.385)
+metadata/_edit_use_anchors_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_64yhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qhwfg")
+
+[node name="LerpTarget" type="Node2D" parent="."]
+
+[node name="Hand" type="Node2D" parent="."]

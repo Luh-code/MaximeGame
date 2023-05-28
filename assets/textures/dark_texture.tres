@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://xnrdr7tqc7ng"]
+
+[ext_resource type="Texture2D" uid="uid://cletjoinjelkf" path="res://assets/textures/Atlas.png" id="1_6us6h"]
+[ext_resource type="Texture2D" uid="uid://b82qymsmr40c2" path="res://assets/textures/NormalMap.png" id="2_c68qj"]
+
+[resource]
+diffuse_texture = ExtResource("1_6us6h")
+normal_texture = ExtResource("2_c68qj")

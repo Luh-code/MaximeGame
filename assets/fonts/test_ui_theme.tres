@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://xtxkc7dbnc5o"]
+
+[ext_resource type="FontFile" uid="uid://jab6wdi8mk1c" path="res://assets/fonts/LandasansMedium-ALJ6m.otf" id="1_hgwl3"]
+
+[resource]
+Fonts/fonts/large = ExtResource("1_hgwl3")
+Fonts/fonts/normal = ExtResource("1_hgwl3")
+Label/fonts/font = ExtResource("1_hgwl3")
