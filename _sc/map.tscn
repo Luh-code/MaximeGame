@@ -9,7 +9,7 @@
 script = ExtResource("1_5qj6x")
 starting = ExtResource("2_mey7w")
 rooms = Array[PackedScene]([ExtResource("2_mey7w"), ExtResource("3_4dvnk")])
-roomnum = 11
+roomnum = 10
 
 [node name="rooms" type="Node2D" parent="."]
 unique_name_in_owner = true

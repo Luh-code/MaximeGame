@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbbiwcituov4n"]
+[gd_scene load_steps=8 format=3 uid="uid://cbbiwcituov4n"]
 
 [ext_resource type="Script" path="res://entities/player.gd" id="1_5e0hm"]
 [ext_resource type="PackedScene" uid="uid://cwejipfi33jws" path="res://tools/debug_interface.tscn" id="2_q3qkn"]
 [ext_resource type="PackedScene" uid="uid://6na30yv3c5qc" path="res://entities/guns/generic_gun.tscn" id="2_t7obh"]
+[ext_resource type="Shader" path="res://entities/camera.gdshader" id="3_ge1lf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3lp5h"]
+shader = ExtResource("3_ge1lf")
 
 [sub_resource type="SphereMesh" id="SphereMesh_64yhe"]
 radius = 6.0
@@ -21,6 +25,7 @@ decel = 1300.0
 holding_scene = ExtResource("2_t7obh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+material = SubResource("ShaderMaterial_3lp5h")
 zoom = Vector2(2.6, 2.6)
 
 [node name="Debug Interface" parent="Camera2D" instance=ExtResource("2_q3qkn")]
