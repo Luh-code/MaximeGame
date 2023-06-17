@@ -21,7 +21,7 @@ script = ExtResource("1_5e0hm")
 debug_interface = NodePath("Camera2D/Debug Interface")
 camLerpSpeed = 9.0
 accel = 2300.0
-decel = 1300.0
+decel = 1800.0
 holding_scene = ExtResource("2_t7obh")
 
 [node name="Camera2D" type="Camera2D" parent="."]

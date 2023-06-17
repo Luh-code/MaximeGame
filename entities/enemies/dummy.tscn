@@ -3,5 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://bktv2ovuxea7v" path="res://entities/enemies/basic_enemy.tscn" id="1_x3dse"]
 [ext_resource type="Script" path="res://entities/enemies/dummy.gd" id="2_iviha"]
 
-[node name="basic_enemy" groups=["Enemy"] instance=ExtResource("1_x3dse")]
+[node name="basic_enemy" instance=ExtResource("1_x3dse")]
 script = ExtResource("2_iviha")

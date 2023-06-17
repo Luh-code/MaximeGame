@@ -15,7 +15,7 @@ colors = PackedColorArray(0.61, 0.061, 0.0701499, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0rjfw"]
 gradient = SubResource("Gradient_1plyj")
 
-[node name="basic_enemy" type="CharacterBody2D"]
+[node name="basic_enemy" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 2
 collision_mask = 7
 

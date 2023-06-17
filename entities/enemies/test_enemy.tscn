@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://3d7anhhixdas"]
+
+[ext_resource type="Script" path="res://entities/enemies/test_enemy.gd" id="2_jrfgl"]
+[ext_resource type="PackedScene" uid="uid://6na30yv3c5qc" path="res://entities/guns/generic_gun.tscn" id="3_miawa"]
+[ext_resource type="Script" path="res://entities/enemies/NavigationAgent2D.gd" id="4_uvq7k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2pa87"]
+radius = 5.0
+height = 15.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_d8gaq"]
+radius = 5.0
+height = 15.0
+
+[sub_resource type="Gradient" id="Gradient_1plyj"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.61, 0.061, 0.0701499, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0rjfw"]
+gradient = SubResource("Gradient_1plyj")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_at06c"]
+radius = 189.0
+
+[node name="test_enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("2_jrfgl")
+speed = 4000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2pa87")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("CapsuleMesh_d8gaq")
+texture = SubResource("GradientTexture1D_0rjfw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_at06c")
+
+[node name="Hand" type="Node2D" parent="."]
+
+[node name="generic_gun" parent="Hand" instance=ExtResource("3_miawa")]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
+avoidance_enabled = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.945098, 0, 0.152941, 1)
+debug_path_custom_point_size = 5.97
+debug_path_custom_line_width = 0.27
+script = ExtResource("4_uvq7k")

@@ -18,6 +18,7 @@ func _ready():
 
 func change_weapon():
 	var temp = holding_scene.instantiate()
+	temp.name = "gun"
 	hand.add_child(temp)
 
 func _process(delta):
@@ -51,4 +52,7 @@ func _physics_process(delta):
 	camera.global_position -= (lerpTarget.global_position - last_pos)/2
 	
 	camera.global_position = lerp(camera.global_position, lerpTarget.global_position, camLerpSpeed*delta)
+	
+	if Input.is_action_pressed("shoot"):
+		hand.get_child(0).call("shoot")
 
